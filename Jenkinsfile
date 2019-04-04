@@ -16,7 +16,7 @@ node{
       }
       
       stage('Build Docker Image'){
-         sh 'docker build -t abhishekverma18/javademoapp_$JOB_NAME:$BUILD_NUMBER .'
+            sh "docker build -t abhishekverma18/javademoapp_${JOB_NAME}:${BUILD_NUMBER} ."
       }  
    
       stage('Publish Docker Image'){
